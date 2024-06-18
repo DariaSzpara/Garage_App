@@ -10,7 +10,7 @@ class GarageAdmin(admin.ModelAdmin):
 
 class ClientAdmin(admin.ModelAdmin):
     list_display = ("id", "name_client", "last_name_client", "email")
-    search_fields = ("name_client__exact",)
+    search_fields = ("name_client",)
 
 
 class ServiceAdmin(admin.ModelAdmin):
