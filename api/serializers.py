@@ -7,51 +7,34 @@ from .models import CarMechanic, Client, Garage, Scheduler, Service
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ["id", "username", "email"]
+        fields = __all__
 
 
 class GarageSerializer(serializers.ModelSerializer):
     class Meta:
         model = Garage
-        fields = [
-            "id",
-            "name_garage",
-            "adress_city_name",
-            "street_name",
-            "house_number",
-            "postal_code",
-        ]
+        fields = __all__
 
 
 class ClientSerializer(serializers.ModelSerializer):
     class Meta:
         model = Client
-        fields = [
-            "id",
-            "name_client",
-            "last_name_client",
-            "email",
-            "adress_city_name",
-            "street_name",
-            "house_number",
-            "postal_code",
-            "number_phone",
-        ]
+        fields = __all__
 
 
 class ServiceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Service
-        fields = ["id", "name_of_service", "price", "status_paid"]
+        fields = __all__
 
 
 class SchedulerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Scheduler
-        fields = ["id", "date"]
+        fields = __all__
 
 
 class CarMechanicSerializer(serializers.ModelSerializer):
     class Meta:
         model = CarMechanic
-        fields = ["id", "first_name", "last_name", "number_phone"]
+        fields = __all__
