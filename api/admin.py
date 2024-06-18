@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Garage, Client, Service, Scheduler, CarMechanic
+
+from .models import CarMechanic, Client, Garage, Scheduler, Service
 
 
 # Register your models here.

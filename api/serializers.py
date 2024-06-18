@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from .models import Garage, Client, Service, Scheduler, CarMechanic
+
+from .models import CarMechanic, Client, Garage, Scheduler, Service
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

@@ -1,15 +1,11 @@
 from django.contrib.auth.models import User
 from rest_framework import permissions, viewsets
-from .models import Garage, Client, Service, Scheduler, CarMechanic
 
-from api.serializers import (
-    UserSerializer,
-    GarageSerializer,
-    ClientSerializer,
-    ServiceSerializer,
-    SchedulerSerializer,
-    CarMechanicSerializer,
-)
+from api.serializers import (CarMechanicSerializer, ClientSerializer,
+                             GarageSerializer, SchedulerSerializer,
+                             ServiceSerializer, UserSerializer)
+
+from .models import CarMechanic, Client, Garage, Scheduler, Service
 
 
 class UserViewSet(viewsets.ModelViewSet):
