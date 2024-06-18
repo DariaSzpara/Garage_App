@@ -31,9 +31,7 @@ class Migration(migrations.Migration):
                     "postal_code",
                     models.CharField(
                         max_length=6,
-                        validators=[
-                            django.core.validators.RegexValidator("^[0-9]{2}-[0-9]{3}")
-                        ],
+                        validators=[django.core.validators.RegexValidator("^[0-9]{2}-[0-9]{3}")],
                     ),
                 ),
             ],

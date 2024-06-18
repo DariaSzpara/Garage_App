@@ -9,9 +9,7 @@ class Garage(models.Model):
     adress_city_name = models.CharField(max_length=50)
     street_name = models.CharField(max_length=50)
     house_number = models.CharField(max_length=50)
-    postal_code = models.CharField(
-        max_length=6, validators=[RegexValidator("^[0-9]{2}-[0-9]{3}")]
-    )
+    postal_code = models.CharField(max_length=6, validators=[RegexValidator("^[0-9]{2}-[0-9]{3}")])
 
 
 class Client(models.Model):
@@ -21,17 +19,12 @@ class Client(models.Model):
     adress_city_name = models.CharField(max_length=50)
     street_name = models.CharField(max_length=50)
     house_number = models.CharField(max_length=50)
-    postal_code = models.CharField(
-        max_length=6, validators=[RegexValidator("^[0-9]{2}-[0-9]{3}")]
-    )
+    postal_code = models.CharField(max_length=6, validators=[RegexValidator("^[0-9]{2}-[0-9]{3}")])
     number_phone = models.CharField(max_length=9, null=True, blank=True)
 
 
 class Service(models.Model):
-    STATUS_PRICE = [
-        ('UP', 'Unpaid'),
-        ('P', 'Paid')
-    ]
+    STATUS_PRICE = [("UP", "Unpaid"), ("P", "Paid")]
     name_of_service = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=5, decimal_places=2)
     status_paid = models.CharField(max_length=2, choices=STATUS_PRICE, null=True, blank=True)

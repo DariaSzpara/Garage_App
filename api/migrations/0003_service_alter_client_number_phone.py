@@ -26,9 +26,7 @@ class Migration(migrations.Migration):
                 ("price", models.DecimalField(decimal_places=2, max_digits=5)),
                 (
                     "status_paid",
-                    models.CharField(
-                        choices=[("UP", "Unpaid"), ("P", "Paid")], max_length=2
-                    ),
+                    models.CharField(choices=[("UP", "Unpaid"), ("P", "Paid")], max_length=2),
                 ),
             ],
         ),
