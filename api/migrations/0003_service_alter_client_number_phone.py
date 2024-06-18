@@ -6,22 +6,35 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0002_client'),
+        ("api", "0002_client"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Service',
+            name="Service",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_of_servic', models.CharField(max_length=100)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=5)),
-                ('status_paid', models.CharField(choices=[('UP', 'Unpaid'), ('P', 'Paid')], max_length=2)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name_of_servic", models.CharField(max_length=100)),
+                ("price", models.DecimalField(decimal_places=2, max_digits=5)),
+                (
+                    "status_paid",
+                    models.CharField(
+                        choices=[("UP", "Unpaid"), ("P", "Paid")], max_length=2
+                    ),
+                ),
             ],
         ),
         migrations.AlterField(
-            model_name='client',
-            name='number_phone',
+            model_name="client",
+            name="number_phone",
             field=models.CharField(blank=True, max_length=9, null=True),
         ),
     ]

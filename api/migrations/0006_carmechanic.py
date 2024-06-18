@@ -6,17 +6,25 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0005_scheduler_remove_service_status_paid'),
+        ("api", "0005_scheduler_remove_service_status_paid"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='CarMechanic',
+            name="CarMechanic",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('first_name', models.CharField(max_length=15)),
-                ('last_name', models.CharField(max_length=15)),
-                ('number_phone', models.CharField(blank=True, max_length=9, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("first_name", models.CharField(max_length=15)),
+                ("last_name", models.CharField(max_length=15)),
+                ("number_phone", models.CharField(blank=True, max_length=9, null=True)),
             ],
         ),
     ]

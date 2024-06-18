@@ -8,19 +8,34 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Garage',
+            name="Garage",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_garage', models.CharField(max_length=55)),
-                ('adress_city_name', models.CharField(max_length=50)),
-                ('street_name', models.CharField(max_length=50)),
-                ('house_number', models.CharField(max_length=50)),
-                ('postal_code', models.CharField(max_length=6, validators=[django.core.validators.RegexValidator('^[0-9]{2}-[0-9]{3}')])),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name_garage", models.CharField(max_length=55)),
+                ("adress_city_name", models.CharField(max_length=50)),
+                ("street_name", models.CharField(max_length=50)),
+                ("house_number", models.CharField(max_length=50)),
+                (
+                    "postal_code",
+                    models.CharField(
+                        max_length=6,
+                        validators=[
+                            django.core.validators.RegexValidator("^[0-9]{2}-[0-9]{3}")
+                        ],
+                    ),
+                ),
             ],
         ),
     ]

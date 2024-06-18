@@ -7,22 +7,41 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0001_initial'),
+        ("api", "0001_initial"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Client',
+            name="Client",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name_client', models.CharField(max_length=20)),
-                ('last_name_client', models.CharField(max_length=20)),
-                ('email', models.EmailField(max_length=254, unique=True)),
-                ('adress_city_name', models.CharField(max_length=50)),
-                ('street_name', models.CharField(max_length=50)),
-                ('house_number', models.CharField(max_length=50)),
-                ('postal_code', models.CharField(max_length=6, validators=[django.core.validators.RegexValidator('^[0-9]{2}-[0-9]{3}')])),
-                ('number_phone', models.CharField(blank=True, max_length=20, null=True)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name_client", models.CharField(max_length=20)),
+                ("last_name_client", models.CharField(max_length=20)),
+                ("email", models.EmailField(max_length=254, unique=True)),
+                ("adress_city_name", models.CharField(max_length=50)),
+                ("street_name", models.CharField(max_length=50)),
+                ("house_number", models.CharField(max_length=50)),
+                (
+                    "postal_code",
+                    models.CharField(
+                        max_length=6,
+                        validators=[
+                            django.core.validators.RegexValidator("^[0-9]{2}-[0-9]{3}")
+                        ],
+                    ),
+                ),
+                (
+                    "number_phone",
+                    models.CharField(blank=True, max_length=20, null=True),
+                ),
             ],
         ),
     ]

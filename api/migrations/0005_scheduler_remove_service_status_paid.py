@@ -6,19 +6,27 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('api', '0004_rename_name_of_servic_service_name_of_service'),
+        ("api", "0004_rename_name_of_servic_service_name_of_service"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Scheduler',
+            name="Scheduler",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('date', models.DateTimeField()),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("date", models.DateTimeField()),
             ],
         ),
         migrations.RemoveField(
-            model_name='service',
-            name='status_paid',
+            model_name="service",
+            name="status_paid",
         ),
     ]
