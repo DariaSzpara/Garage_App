@@ -18,8 +18,13 @@ class ServiceAdmin(admin.ModelAdmin):
     list_filter = ["status_paid"]
 
 
+class SchedulerAdmin(admin.ModelAdmin):
+    list_display = ("id", "date")
+    date_hierarchy = "date"
+
+
 admin.site.register(Garage, GarageAdmin)
 admin.site.register(Client, ClientAdmin)
 admin.site.register(Service, ServiceAdmin)
-admin.site.register(Scheduler)
+admin.site.register(Scheduler, SchedulerAdmin)
 admin.site.register(CarMechanic)
