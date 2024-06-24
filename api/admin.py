@@ -11,7 +11,7 @@ class GarageAdmin(admin.ModelAdmin):
 class ClientAdmin(admin.ModelAdmin):
     list_display = ("id", "name_client", "last_name_client", "email")
     search_fields = ("name_client",)
-    search_start = Client.name_client__startswith = "Ann"
+    # search_start = Client.name_client__startswith = "Ann"
 
 
 class ServiceAdmin(admin.ModelAdmin):

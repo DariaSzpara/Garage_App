@@ -7,7 +7,7 @@ from .models import CarMechanic, Client, Garage, Scheduler, Service
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = "__all__"
+        fields = ["id", "username", "email"]
 
 
 class GarageSerializer(serializers.ModelSerializer):
