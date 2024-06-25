@@ -5,12 +5,12 @@ from .models import CarMechanic, Client, Garage, Scheduler, Service
 
 # Register your models here.
 class GarageAdmin(admin.ModelAdmin):
-    list_display = ("id", "name_garage")
+    list_display = '("id", "name_garage")'
 
 
 class ClientAdmin(admin.ModelAdmin):
     list_display = ("id", "name_client", "last_name_client", "email")
-    search_fields = ("name_client__exact",)
+    search_fields = ("name_client",)
 
 
 class ServiceAdmin(admin.ModelAdmin):
